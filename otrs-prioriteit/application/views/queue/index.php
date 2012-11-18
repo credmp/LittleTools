@@ -1,8 +1,21 @@
-<table>
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+            $("#myTable").tablesorter( {sortList: [[4,1]]} ); 
+        } 
+);  
+</script>
+
+
+
+<h1>Queues</h1>
+
+	<div id="body">
+<table id="myTable" class="tablesorter">
 <thead>
-    <td>id</td>
-    <td>name</td>
-    <td>name</td>
+    <th>id</th>
+    <th>name</th>
+    <th>name</th>
 </thead>
 <tbody>
 <?php foreach ($queue as $news_item): ?>
@@ -14,3 +27,4 @@
 <?php endforeach ?>
 </tbody>
 </table>
+</div>

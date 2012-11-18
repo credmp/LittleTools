@@ -6,16 +6,26 @@ $(document).ready(function() {
 	        id   : 'id',
 	        name : 'prioriteit'
 	     });
- });
+});
+
+$(document).ready(function() 
+    { 
+            $("#myTable").tablesorter( {sortList: [[4,1]]} ); 
+        } 
+);
 </script>
 
-<table>
+<h1>Tickets</h1>
+        
+	<div id="body">
+<a href="/LittleTools/otrs-prioriteit/index.php/queue">Back</a>
+<table width="100%" id="myTable" class="tablesorter">
 <thead>
-	<td>id</td>
-	<td>tn</td>
-	<td>title</td>
-	<td>field</td>
-	<td>value</td>
+	<th>id</th>
+	<th>tn</th>
+	<th>title</th>
+	<th>field</th>
+	<th>value</th>
 </thead>
 <tbody>
 <?php foreach ($tickets as $ticket): ?>
@@ -29,3 +39,4 @@ $(document).ready(function() {
 <?php endforeach ?>
 </tbody>
 </table>
+</div>
